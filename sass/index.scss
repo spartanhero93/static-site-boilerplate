@@ -1,3 +1,10 @@
 // Core variables and mixins
 @import "_variables";
-@import "_global"
+
+// Global CSS
+@import "_global";
+
+// Components
+@import "_navbar";
+@import "_masthead";
+@import "_services"

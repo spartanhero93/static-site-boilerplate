@@ -1,0 +1,45 @@
+// Styling for the masthead
+header.masthead {
+  text-align: center;
+  color: white;
+  background-image: url('../../img/header-bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  .intro-text {
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+    .intro-lead-in {
+      font-size: 2.2rem;
+      font-style: italic;
+      line-height: 2.2rem;
+      margin-bottom: 2.5rem;
+    }
+    .intro-heading {
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 5rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+@media(min-width:768px) {
+  header.masthead {
+    .intro-text {
+      padding-top: 30rem;
+      padding-bottom: 20rem;
+      .intro-lead-in {
+        font-size: 4rem;
+        font-style: italic;
+        line-height: 4rem;
+        margin-bottom: 2.5rem;
+      }
+      .intro-heading {
+        font-size: 7.5rem;
+        font-weight: 700;
+        line-height: 7.5rem;
+        margin-bottom: 5rem;
+      }
+    }
+  }
+}

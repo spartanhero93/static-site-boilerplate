@@ -4,16 +4,145 @@
 <head>
   <meta charset='utf-8' />
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>Template</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+
+  <!-- Custom fonts for this template -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles -->
   <link rel='stylesheet' type='text/css' media='screen' href='./dist/css/index.min.css' />
+
 </head>
 
 <body>
-  <div class="container">
-    <h1>Hello</h1>
-  </div>
 
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="mainNav">
+    <div class="container">
+      <a data-scroll class="navbar-brand" href="#mainNav">Waifus are great</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#services" data-scroll data-target=".navbar-collapse.show" data-toggle="collapse">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio" data-scroll data-target=".navbar-collapse.show" data-toggle="collapse">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about" data-scroll data-target=".navbar-collapse.show" data-toggle="collapse">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team" data-scroll data-target=".navbar-collapse.show" data-toggle="collapse">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact" data-scroll data-target=".navbar-collapse.show" data-toggle="collapse">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead mb-5">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">Welcome To Our Waifu Empire!</div>
+        <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center ">
+          <h2 class="section-heading text-uppercase mb-5">Services</h2>
+          <h3 class="section-subheading text-muted mb-5">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">E-Commerce</h4>
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex
+            magni, dicta impedit.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Responsive Design</h4>
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex
+            magni, dicta impedit.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Web Security</h4>
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex
+            magni, dicta impedit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js">
+  </script>
+
+  <script>
+    const scroll = new SmoothScroll('a[href*="#"]');
+    // window.onscroll = function () {
+    //   //<=== Hide cards on load, then add animation ===>//
+    //   const workCards = document.querySelectorAll('.work-cards')
+    //   const accountCards = document.querySelectorAll('.account-cards')
+    //   workCards.forEach(item => item.classList.add('hide'))
+    //   window.pageYOffset > 150 ?
+    //     workCards.forEach(item => item.classList.add('animated', 'fadeInUp'))
+    //     :
+    //     workCards.forEach(item => item.classList.remove('animated', 'fadeInUp'))
+    //   //<=== Hide social Account links then add animation to them ===>//
+    //   // ONLY IF WINDOW IS LARGER THAN MOBILE //
+    //   if (window.innerWidth > 1024) {
+    //     accountCards.forEach(card => card.classList.add('hide'))
+    //     let trigger = 2100
+    //     window.pageYOffset > trigger ?
+    //       accountCards.forEach(card => card.classList.add('animated', 'fadeInUp'))
+    //       :
+    //       accountCards.forEach(card => card.classList.remove('animated', 'fadeInUp'))
+    //   }
+    // }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
 
   <script src='index.js'></script>
 </body>
