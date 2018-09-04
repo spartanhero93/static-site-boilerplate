@@ -5,11 +5,16 @@
   .navbar-toggler {
     font-size: 3rem;
     right: 0;
-    padding: 1.3rem;
+    padding: .8rem;
     text-transform: uppercase;
     color: white;
     border: 0;
     background-color: $primary;
+    outline: none;
+    transition: all .2s ease-out;
+    &:active {
+      transform: scaleX(1.1)
+    }
   }
   .navbar-brand {
     color: $primary;
@@ -22,29 +27,47 @@
   }
   .navbar-nav {
     .nav-item {
-      .nav-link {
+      a {
         font-size: 90%;
         font-weight: 400;
-        padding: 0.75em 0;
-        letter-spacing: 1px;
-        color: white;
-        &.active,
-        &:hover {
-          color: $primary;
+        color: $font-primary;
+        text-decoration: underline $primary;
+        margin: 0 3rem;
+        position: relative;
+        overflow: hidden;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          bottom: 0;
+          left: 0;
+          background-color: $primary;
+          visibility: hidden;
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transition: all 0.3s ease-in-out 0s;
+          transition: all 0.3s ease-in-out 0s;
+          z-index: -2;
+        }
+        &:hover:before {
+          visibility: visible;
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
         }
       }
+      
     }
   }
 }
 @media(min-width:992px) {
   #mainNav {
-    padding-top: 25px;
-    padding-bottom: 25px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
-    background-color: transparent;
     .navbar-brand {
       font-size: 1.75em;
       -webkit-transition: all 0.3s;
@@ -58,6 +81,7 @@
         }
       }
     }
+    
     &.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;

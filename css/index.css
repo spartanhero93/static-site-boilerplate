@@ -5,8 +5,8 @@ html {
 body {
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
-  background: #222930;
+  background-color: #282c34;
+  z-index: -9999 !important;
 }
 
 *, *::before, *::after {
@@ -17,11 +17,36 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  font-weight: 700;
+  font-weight: 200;
 }
 
 p {
   font-size: 1.3rem;
+}
+
+#particles-js {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.content {
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+  height: auto;
+  width: 100%;
+}
+
+svg {
+  width: 50%;
+  height: 50%;
+}
+
+text {
+  fill: red;
 }
 
 .btn {
@@ -30,23 +55,23 @@ p {
 
 .btn-xl {
   font-size: 1.5rem;
-  padding: 1.8rem 4rem;
+  padding: .5rem 1rem;
 }
 
 .btn-primary {
-  background-color: #4EB1BA;
-  border-color: #4EB1BA;
+  background-color: #61dafb;
+  border-color: #61dafb;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #3f9aa2 !important;
-  border-color: #3f9aa2 !important;
+  background-color: #3cd1fa !important;
+  border-color: #3cd1fa !important;
   color: white;
 }
 
 .btn-primary:active, .btn-primary:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
-          box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+  -webkit-box-shadow: 0 0 0 0.2rem white !important;
+          box-shadow: 0 0 0 0.2rem white !important;
 }
 
 #mainNav {
@@ -57,41 +82,69 @@ p {
 #mainNav .navbar-toggler {
   font-size: 3rem;
   right: 0;
-  padding: 1.3rem;
+  padding: .8rem;
   text-transform: uppercase;
   color: white;
   border: 0;
-  background-color: #4EB1BA;
+  background-color: #61dafb;
+  outline: none;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+#mainNav .navbar-toggler:active {
+  -webkit-transform: scaleX(1.1);
+          transform: scaleX(1.1);
 }
 
 #mainNav .navbar-brand {
-  color: #4EB1BA;
+  color: #61dafb;
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #3c9199;
+  color: #2fcefa;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link {
+#mainNav .navbar-nav .nav-item a {
   font-size: 90%;
   font-weight: 400;
-  padding: 0.75em 0;
-  letter-spacing: 1px;
-  color: white;
+  color: #ffffff;
+  -webkit-text-decoration: underline #61dafb;
+          text-decoration: underline #61dafb;
+  margin: 0 3rem;
+  position: relative;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #4EB1BA;
+#mainNav .navbar-nav .nav-item a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #61dafb;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  z-index: -2;
+}
+
+#mainNav .navbar-nav .nav-item a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 25px;
-    padding-bottom: 25px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
-    background-color: transparent;
   }
   #mainNav .navbar-brand {
     font-size: 1.75em;
@@ -114,16 +167,19 @@ p {
 
 header.masthead {
   text-align: center;
-  color: white;
-  background-image: url("../../img/header-bg.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-}
-
-header.masthead .intro-text {
-  padding-top: 15rem;
-  padding-bottom: 10rem;
+  color: #ffffff;
+  z-index: 1;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header.masthead .intro-text .intro-lead-in {
@@ -141,9 +197,9 @@ header.masthead .intro-text .intro-heading {
 }
 
 @media (min-width: 768px) {
-  header.masthead .intro-text {
-    padding-top: 30rem;
-    padding-bottom: 20rem;
+  header.masthead {
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
   }
   header.masthead .intro-text .intro-lead-in {
     font-size: 4rem;
@@ -162,10 +218,27 @@ header.masthead .intro-text .intro-heading {
 #services {
   margin: 4rem 0;
   line-height: 1rem;
-  color: #4EB1BA;
+  color: #61dafb;
 }
 
 #services .row p {
+  line-height: 2.5rem;
+}
+
+.service-heading {
+  margin: 1.5rem 0;
+  text-transform: none;
+}
+
+#skills {
+  margin: 4rem 0;
+  line-height: 1rem;
+  background-color: #ffffff;
+  color: #61dafb;
+  padding: 6rem 0;
+}
+
+#skills .row p {
   line-height: 2.5rem;
 }
 

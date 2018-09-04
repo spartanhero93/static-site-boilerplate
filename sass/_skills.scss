@@ -1,0 +1,17 @@
+// Styling for the services section
+#skills {
+  margin: 4rem 0;
+  line-height: 1rem;
+  background-color: $font-primary;
+  color: $primary;
+  padding: 6rem 0;
+  .row p {
+    line-height: 2.5rem;
+  }
+}
+
+.service-heading {
+  margin: 1.5rem 0;
+  text-transform: none;
+}
+

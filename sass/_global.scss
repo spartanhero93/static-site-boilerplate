@@ -5,9 +5,8 @@ html {
 body {
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
-  
-  background: $secondary;
+  background-color: #282c34;
+  z-index: -9999 !important;
 }
 
 *, *::before, *::after {
@@ -17,21 +16,43 @@ body {
 }
 
 h1,h2,h3,h4,h5 {
-  font-weight: 700;
+  font-weight: 200;
 }
 p {
   font-size: 1.3rem;
 }
 
+#particles-js {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: -10;
+  overflow: hidden;
+}
+.content {
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+  height: auto;
+  width: 100%;
+}
+
+svg{
+  width:50%;
+  height:50%;
+}
+
+text{
+  fill:red;
+}
 // Button Styles
 .btn {
   font-weight: 700;
 }
 
 .btn-xl {
-
   font-size: $small-font;
-  padding: 1.8rem 4rem;
+  padding: .5rem 1rem;
 }
 
 .btn-primary {
@@ -46,6 +67,6 @@ p {
   }
   &:active,
   &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
+    box-shadow: 0 0 0 0.2rem rgb(255, 255, 255) !important;
   }
 }

@@ -1,14 +1,14 @@
 // Styling for the masthead
 header.masthead {
   text-align: center;
-  color: white;
-  background-image: url('../../img/header-bg.jpg');
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
+  color: $font-primary;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   .intro-text {
-    padding-top: 15rem;
-    padding-bottom: 10rem;
     .intro-lead-in {
       font-size: 2.2rem;
       font-style: italic;
@@ -25,9 +25,8 @@ header.masthead {
 }
 @media(min-width:768px) {
   header.masthead {
+    align-content: flex-start;
     .intro-text {
-      padding-top: 30rem;
-      padding-bottom: 20rem;
       .intro-lead-in {
         font-size: 4rem;
         font-style: italic;
