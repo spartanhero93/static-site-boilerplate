@@ -1,7 +1,7 @@
 // Styling for the services section
-#skills {
+#work {
   line-height: 1rem;
-  background-color: $font-primary;
+  background-color: $secondary;
   color: $primary;
   padding: 6rem 0;
   .row p {
@@ -10,10 +10,8 @@
   .service-heading {
     margin: 2rem 0 2rem;
     text-transform: none;
-    color: $secondary;
   }
   .section-heading {
-    color: $secondary;
   }
 
 }
