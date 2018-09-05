@@ -107,11 +107,12 @@ p {
   color: #ffffff;
   -webkit-text-decoration: underline #61dafb;
           text-decoration: underline #61dafb;
-  margin: 0 3rem;
+  margin: 0 1rem;
   position: relative;
   overflow: hidden;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+  text-align: center;
 }
 
 #mainNav .navbar-nav .nav-item a:before {
@@ -231,7 +232,7 @@ header.masthead .intro-text .intro-heading {
 #work {
   line-height: 1rem;
   background-color: #282c34;
-  color: #61dafb;
+  color: #282c34;
   padding: 6rem 0;
 }
 
@@ -239,9 +240,32 @@ header.masthead .intro-text .intro-heading {
   line-height: 2.5rem;
 }
 
-#work .service-heading {
-  margin: 2rem 0 2rem;
-  text-transform: none;
+#work .section-heading {
+  color: #61dafb;
+}
+
+#work .section-subheading {
+  color: #ffffff;
+}
+
+#work .card {
+  width: 250px;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  margin-bottom: 2rem;
+}
+
+#work .card:hover {
+  -webkit-box-shadow: 4px 4px 4px black;
+          box-shadow: 4px 4px 4px black;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media (max-width: 700px) {
+  .card {
+    margin: 1rem auto;
+  }
 }
 
 .card-container {

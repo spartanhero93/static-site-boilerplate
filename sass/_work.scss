@@ -2,17 +2,36 @@
 #work {
   line-height: 1rem;
   background-color: $secondary;
-  color: $primary;
+  color: $secondary;
   padding: 6rem 0;
   .row p {
     line-height: 2.5rem;
   }
-  .service-heading {
-    margin: 2rem 0 2rem;
-    text-transform: none;
-  }
   .section-heading {
+    color: $primary;
+  }
+  .section-subheading {
+    color: $font-primary;
+  }
+  .card {
+    width: 250px;
+    transition: all 300ms ease-out;
+    margin-bottom: 2rem;
+    &:hover {
+      box-shadow: 4px 4px 4px black;
+      transform: scale(1.05);
+    }
   }
 
+}
+@media(max-width: 1200px){
+  .card {
+  }
+}
+
+@media(max-width: 700px){
+  .card {
+    margin: 1rem auto;
+  }
 }
 
