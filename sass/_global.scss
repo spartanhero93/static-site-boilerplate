@@ -43,6 +43,11 @@ p {
 }
 
 // Button Styles
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .btn {
   font-weight: 700;
 }

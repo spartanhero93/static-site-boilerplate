@@ -45,6 +45,15 @@ p {
   width: 90px;
 }
 
+.button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .btn {
   font-weight: 700;
 }
@@ -249,7 +258,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 #work .card {
-  width: 250px;
+  width: 25rem;
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
   margin-bottom: 2rem;
@@ -260,6 +269,36 @@ header.masthead .intro-text .intro-heading {
           box-shadow: 4px 4px 4px black;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+#work .card-img-top {
+  border-bottom: 3px solid;
+}
+
+#work .card-title {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+#work .card-description {
+  color: #61dafb;
+}
+
+#work .card__custom-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+}
+
+#work .card__custom-icons img {
+  padding: 0;
+  margin: 0;
+  height: 4rem;
+  width: 4rem;
 }
 
 @media (max-width: 700px) {
